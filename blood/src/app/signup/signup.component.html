@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Your Page Title</title>
+</head>
+<body>
+ 
+  <div class="background-image">
+      <!-- Your form goes here -->
+      <div class="formclass2">
+        <form  [formGroup]="signupForm" (submit)="onSubmit()">
+          <div class="form_div">
+            <div *ngIf="registrationSuccess" class="success-message">
+              User registered successfully!
+            </div>
+            <label for="nom">Nom</label>
+            <input type="text" class="field_class" id="nom" formControlName="nom">
+          
+            <label for="prenom">Prénom</label>
+            <input type="text" class="field_class" id="prenom" formControlName="prenom">
+          
+            <label for="dates">Date de Naissance</label>
+            <input type="date" class="field_class" id="dates" formControlName="dates">
+          
+            <label for="phone">Téléphone</label>
+            <input type="tel" class="form-control" id="phone" formControlName="phone">
+          
+            <label for="emails">Email address</label>
+            <input type="email" class="field_class" id="emails" formControlName="email">
+          
+            <label for="password">Password</label>
+            <input type="password" class="field_class" id="password" formControlName="password">
+          
+            <label for="postal">Code Postal</label>
+            <input type="number" class="field_class" id="postal" formControlName="codepostal">
+          
+            <label for="types">Type de Sang</label>
+            <input type="text" class="field_class" id="types" formControlName="typedesang">
+          
+            <label for="files">Fiche Médicale</label>
+            <input type="file" class="field_class" id="files" formControlName="files" accept="application/pdf" (change)="onFileChange($event)">
+          
+            <!-- <button type="submit" class="btn btn-success">Register</button> -->
+            <button class="submit_class" type="submit" >Register</button>
+
+          </div>
+          
+          
+          <div class="info_div">
+              <p>already have an account ?<a  routerLink="/login">login</a></p>
+          </div>
+      </form>
+      </div>
+     
+  </div>
+
+</body>
+</html>

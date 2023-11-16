@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Your Page Title</title>
+</head>
+<body>
+
+  <div class="background-image">
+      <!-- Your form goes here -->
+      <div class="formclass2">
+        <form  class="form_class" [formGroup]="loginForm">
+          <div class="form_div">
+            <label for="emails">Email address</label>
+            <input type="email" class="field_class" id="emails" formControlName="email">
+            <label for="password">Password</label>
+            <input type="password" class="field_class" id="password" formControlName="password">
+            <button class="submit_class" type="submit"  (click)="login()">Login</button>
+          </div>
+          
+          <div class="info_div">
+              <p>don't have an account yet ?<a  routerLink="/signup">signup</a></p>
+          </div>
+      </form>
+      </div>
+     
+  </div>
+
+</body>
+</html>
