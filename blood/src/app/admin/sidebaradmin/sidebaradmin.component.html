@@ -1,0 +1,46 @@
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbarr ">
+                <!-- <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                </a> -->
+                <div class="d-flex align-items-center ms-4 mb-1" style=" height: 100px;">
+                    <div class="position-relative" >
+                        <img class="rounded-circle" src="../../../assets/img/ahmed.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3" >
+                        <h6 class="mb-0">Ahmed Ksiksi</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100" style="height: 100px;">
+                    <a routerLink="/Dashbordadmin" class="nav-item nav-link active"><i class="fas fa-user-cog admin-icon"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a routerLink="/createCentre" class="nav-link"><i class="fa fa-hospital-o" ></i>
+                            Créer un Don</a>
+                      
+                    </div>
+                    <a routerLink="/Don" class="nav-item nav-link"> <i class="fa-regular fa-hospital"></i>Créer un centre</a>
+
+
+                    
+                    <a routerLink="/CreateEvent" class="nav-item nav-link"> <i class="fa-regular fa-hospital"></i>Créer un évènement</a>
+                    <a routerLink="/DisplayCenter" class="nav-item nav-link"><i class="fas f"></i>Tous les dons </a> 
+                    <a routerLink="/DisplayEvent" class="nav-item nav-link"><i class="fas "></i>Tous les évènements</a>
+                    <a routerLink="/DisplayDon" class="nav-item nav-link"><i class="fas "></i>Tous les centres</a>
+
+                    <a [routerLink]="['/AdminProfile/', token.userId]" class="nav-item nav-link"><i class="fas fa-user"></i>
+                        Profil
+                    </a>
+                    
+                    <!-- <button class="dropdown-item" (click)="logout()">Logout</button> -->
+                    <a  class="nav-item nav-link" (click)="logout()" style="color: red"><i class="fas fa-sign-out-alt me-2" style="color: red"></i> Logout </a>
+
+
+
+                    
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->

@@ -1,0 +1,51 @@
+<h5 class="card-title" style="padding-top:50px; text-align:center ;font-size: 30px;">Tous les donneurs:  </h5>
+
+  <!-- Blank Start -->
+  <div class="container-fluid pt-4 px-4">
+    <div class="row vh-10  rounded align-items-center justify-content-center mx-0">
+        <div >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <div class="from-outline mt-3">
+                  <div style="padding-bottom: 20px;"> 
+                    <p>Rechercher un donneur: </p>
+                                      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search" aria-label="search" >
+                 
+                  </div>
+          
+              <table class="table table-striped" >
+                    <thead>
+                      <tr>
+                        <th id="teacheraction" scope="col">#</th>
+                        <th id="teacheraction" scope="col">Prénom</th>
+                        <th id="teacheraction" scope="col">Nom</th>
+                        <th id="teacheraction" scope="col">email</th>
+                        <th id="teacheraction" scope="col">Télephone </th>
+            
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of teacher  ;let index = index ;let i as index  ">
+                        <th id="teacheraction" scope="row">{{index+1}}</th>
+                        <td id="teacheraction">{{data.nom}}</td>
+                        <td id="teacheraction" >{{data.prenom}}</td>
+                        <td id="teacheraction" >{{data.email}}</td>
+                        <td id="teacheraction">{{data.telephone}}</td>
+                        
+                    </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+                  <div style="display: flex; justify-content: center;">
+                  </div>
+                </div>
+              </div>
+          </div>        
+          </div>
+    </div>
+</div>
+<!-- Blank End -->
+
+

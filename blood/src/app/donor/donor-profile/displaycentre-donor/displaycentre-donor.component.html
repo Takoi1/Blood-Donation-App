@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>KidKinder - Kindergarten Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+
+</head>
+
+<body>
+  
+
+
+
+
+    <!-- Class Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Find your Event here</span></p>
+                <h1 class="mb-4">Our Latest Events</h1>
+            </div>
+            <div class="row">
+                <div *ngFor="let data of arr;let i as index" class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img  src="../../../assets/images/worl.jpg" alt="" style="width: 350px; height: 200px;">
+
+
+                       
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><i class="far fa-calendar text-primary "style="margin-right: 10px;"></i><strong>Event Name </strong></div>
+                                <div class="col-6 py-1">{{data.name}}</div>
+                            </div><div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><i class="far fa-calendar text-primary "style="margin-right: 10px;"></i><strong>Start  Event Date </strong></div>
+                                <div class="col-6 py-1">{{data.datedebut.substr(0,10)}}</div>
+                            </div><div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><i class="far fa-calendar text-primary "style="margin-right: 10px;"></i><strong>End  Event Date </strong></div>
+                                <div class="col-6 py-1">{{data.datefin.substr(0,10)}}</div>
+                            </div>
+                           
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><i class="far fa-calendar text-primary "style="margin-right: 10px;"></i><strong>Event location </strong></div>
+                                <div class="col-6 py-1">{{data.lieu}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><i class="far fa-calendar text-primary"style="margin-right: 10px;"></i><strong>Event sponsor</strong></div>
+                                <div class="col-6 py-1">{{data.parrainer}}</div>
+                            </div>
+                        </div>
+                        <a  (click)="send(i)" [routerLink]="['/myAllevent/',i._id]" class="btn btn-primary px-4 mx-auto mb-4">JOIN NOW</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Class End -->
+
+
+    
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

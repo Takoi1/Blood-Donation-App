@@ -1,0 +1,62 @@
+<h5 class="card-title" style="padding-top:50px; text-align:center ;font-size: 30px;">Tous les donneurs:  </h5>
+
+  <!-- Blank Start -->
+  <div class="container-fluid pt-4 px-4">
+    <div class="row vh-10  rounded align-items-center justify-content-center mx-0">
+        <div >
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-12">
+                <div class="from-outline mt-3">
+                  <div style="padding-bottom: 20px;"> 
+                    <p>Rechercher un donneur: </p>
+                                      <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search" aria-label="search" >
+                 
+                  </div>
+          
+              <table class="table table-striped" >
+                    <thead>
+                      <tr>
+                        <th id="teacheraction" scope="col">#</th>
+                        <th id="teacheraction" scope="col">Prénom</th>
+                        <th id="teacheraction" scope="col">Nom</th>
+                        <th id="teacheraction" scope="col">email</th>
+                        <th id="teacheraction" scope="col">Télephone </th>
+                        <th id="teacheraction" scope="col">Analyse de sang</th>
+
+                        <th id="teacheraction" scope="col-sm">Action</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let data of teacher  ;let index = index ;let i as index  ">
+                        <th id="teacheraction" scope="row">{{index+1}}</th>
+                        <td id="teacheraction">{{data.nom}}</td>
+                        <td id="teacheraction" >{{data.prenom}}</td>
+                        <td id="teacheraction" >{{data.email}}</td>
+                        <td id="teacheraction">{{data.telephone}}</td>
+                        <!-- <td id="teacheraction" > {{data.pdfPath}}</td> -->
+                        <!-- <a href="http://localhost:4200/Verifier/{{data.pdfPath}}">Visit W3Schools</a>
+                        <a href="{{data.pdfPath}}">Visit </a> -->
+
+                        <td><a style="text-decoration: none;" [href]="'http://localhost:3000/' + data.pdfPath" target="_blank">{{ data.pdfPath.substr(8) }}</a></td>
+                        <td id="teacheraction"> 
+                            <button  type="button" class="btn btn-outline-danger m-2 " style ="margin: 5px;" (click)="deleteteacher(i)">Rejeter</button>
+                            <button type="button" class="btn btn-outline-success m-2" (click)="accepted(i)">Accepter</button>
+                        </td>
+                    </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+                  <div style="display: flex; justify-content: center;">
+                  </div>
+                </div>
+              </div>
+          </div>        
+          </div>
+    </div>
+</div>
+<!-- Blank End -->
+
+

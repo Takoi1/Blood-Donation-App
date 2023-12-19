@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<script src="../../lib/chart/chart.min.js"></script>
+<h5 class="card-title" style="padding-top:50px; text-align:center ;font-size: 30px;">Tous les évènements :   </h5>
+
+<div style="display: flex;justify-content: center;align-items: center; margin: 14%; margin-top: 2%;">
+    <div class="col-sm-12">
+      <div class="from-outline mt-9">
+        <!-- <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search" aria-label="search"> -->
+       
+    <table class="table table-striped" >
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Lieu</th>
+              <th scope="col"> Parrainer</th>
+              <th scope="col">Date de début </th>
+              <th scope="col">Date de fin  </th>
+              <th scope="col">Action</th>
+  
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of event let index = index ;let i as index    "> 
+              <th scope="row">{{index+1}}</th>
+              <td>{{data.name}}</td>
+              <td>{{data.lieu}}</td>
+              <td>{{data.parrainer}}</td>
+              <td>{{data.datedebut.substr(0,10)}}</td>
+              <td>{{data.datefin.substr(0,10)}}</td>
+
+              <td>  
+                   <button type="button" class="btn btn-outline-danger m-2 " style ="margin: 5px;" (click)="deleteUser(i)">Delete</button> 
+                   <button type="button" class="btn btn-outline-primary m-2" (click)="events(i)" >Update</button> 
+               </td>
+              
+           </tr>
+          
+          </tbody>
+        </table>
+      </div>
+  <div style="display: flex; justify-content: center;">
+    <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+  </div>
+  </div>
+  

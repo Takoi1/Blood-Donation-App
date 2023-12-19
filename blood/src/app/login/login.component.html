@@ -12,6 +12,9 @@
       <!-- Your form goes here -->
       <div class="formclass2">
         <form  class="form_class" [formGroup]="loginForm">
+          <div class="alert alert-danger" role="alert" *ngIf="error!=''">
+            {{error}}
+          </div>
           <div class="form_div">
             <label for="emails">Email address</label>
             <input type="email" class="field_class" id="emails" formControlName="email">

@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<script src="../../lib/chart/chart.min.js"></script>
+<h5 class="card-title" style="padding-top:50px; text-align:center ;font-size: 30px;">Tous les centres :  </h5>
+
+<div style="display: flex;justify-content: center;align-items: center; margin: 14%; margin-top: 2%;">
+  <div class="col-sm-12">
+    <div class="from-outline mt-3">
+      <!-- <input type="search" [(ngModel)]="searchtext" id="form1" class="form-control" placeholder="search" aria-label="search"> -->
+     
+  <table class="table table-striped" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Email</th>
+            <th scope="col">Téléphone</th>
+
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of bloodCenter let index = index ;let i as index    "> 
+            <th scope="row">{{index+1}}</th>
+            <td>{{data.nomadresse}}</td>
+            <td>{{data.emailcenter}}</td>
+            <td>{{data.phonecenter}}</td>
+
+            
+            
+         </tr>
+        
+        </tbody>
+      </table>
+    </div>
+<div style="display: flex; justify-content: center;">
+  <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+</div>
+</div>

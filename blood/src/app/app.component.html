@@ -1,3 +1,22 @@
+  <div *ngIf="role==='admin'" style="display: flex;">
+          <div>
+             <app-sidebaradmin></app-sidebaradmin>
+          </div>
+       <div style="width: 100% !important">     
+         <router-outlet ></router-outlet>
+       </div>
+  </div>
+  <div *ngIf="role==='donor' || role==='center' || (role===null)">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+
+  </div>
+
+<app-footer></app-footer>
+
+
+
+<!-- 
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer></app-footer> -->

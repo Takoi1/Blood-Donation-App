@@ -1,0 +1,38 @@
+<form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+    
+    <div style="height: 100%; height: 100%; display: flex;justify-content: center;padding-top: 2%;padding-bottom: 5%;">
+        
+        <div class="card" style="width: 60%;">
+        
+            <div class="card-body">
+              <h5 class="card-title">Profile </h5>
+              <label for="">firstname</label>
+              <div>
+              <input type="text" formControlName="firstname" class="form-control">
+              <span *ngIf="!myForm.get('nom')?.valid && myForm.get('nom')?.touched"
+                class="help-block red">Please enter a valid firstname</span>
+              </div>
+              <label for="">Lastname</label>
+              <div>
+              <input type="text" formControlName="prenom" class="form-control"> 
+              <span *ngIf="!myForm.get('prenom')?.valid && myForm.get('prenom')?.touched"
+              class="help-block red">Please enter a valid lastname</span>
+            </div>
+              <label for="">Email</label>
+              <div>
+              <input type="email" formControlName="email" class="form-control">
+              <span *ngIf="!myForm.get('email')?.valid && myForm.get('email')?.touched"
+              class="help-block red">Please enter a valid email</span></div>
+              <label for="">Blood type</label>
+              <div>
+              <input type="text" formControlName="typedesang" class="form-control">
+              <span *ngIf="!myForm.get('typedesang')?.valid && myForm.get('typedesang')?.touched"
+              class="help-block red">Please enter a valid typedesang</span>
+            </div>
+               <br>
+              <button type="submit" class="btn btn-success">Valider</button>
+            </div>
+          </div>
+        
+        </div>
+    </form>

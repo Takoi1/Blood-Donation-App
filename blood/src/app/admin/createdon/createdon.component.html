@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<script src="../../lib/chart/chart.min.js"></script>
+
+<form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+  <div style="height: 100%; height: 100%; display: flex;justify-content: center;padding-top: 2%;padding-bottom: 5%;">
+
+      <div class="card" style="width: 60%;">
+        <div *ngIf="error!=''">
+          <div class="alert alert-danger" role="alert">
+           {{error}}
+          </div>
+        </div>
+        <div *ngIf="success!=''">
+          <div class="alert alert-success" role="alert">
+           {{success}}
+          </div>
+        </div>
+        <br><br>
+
+          <div class="card-body">
+            <h5 class="card-title">Ajouter un nouveau centre </h5>
+<hr class="mt-0 mb-4">
+  <div class="row   rounded align-items-center justify-content-center mx-0">
+      <div class="">
+        <div style="align-items: space-around; width: 80%; padding-left:100px">
+          <div class="from-outline mt-3">
+                <form [formGroup]="myForm" (ngSubmit)="onsubmit()" >
+                  <label for="">Adresse</label>
+                  <input type="text" formControlName="nomadresse" class="form-control">
+                  <label for="">Email</label>
+                  <input type="email" formControlName="emailcenter" class="form-control">
+                  <label for="">Password</label>
+                  <input type="password" formControlName="password" class="form-control">
+                  <label for="">Role</label>
+                  <input type="text" formControlName="role" class="form-control"  />
+                  <label for="phone">Téléphone </label><br>
+                  <input type="phone" formControlName="phonecenter" class="form-control">
+                  <input type="hidden" formControlName="accepted">
+                  <br>
+
+                  <button type="submit" class="btn btn-success">Valider</button>
+                </form>
+            </div>
+        </div>
+                </div>
+  </div>
+</div>
+<!-- Blank End -->

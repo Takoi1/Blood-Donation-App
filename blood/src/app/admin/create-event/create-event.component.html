@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<script src="../../lib/chart/chart.min.js"></script>
+
+<form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+    
+    <div style="height: 100%; height: 100%; display: flex;justify-content: center;padding-top: 2%;padding-bottom: 5%;">
+        
+        <div class="card" style="width: 60%;">
+          <div *ngIf="error!=''">
+            <div class="alert alert-danger" role="alert">
+             {{error}}
+            </div>
+          </div>
+          <div *ngIf="success!=''">
+            <div class="alert alert-success" role="alert">
+             {{success}}
+            </div>
+          </div>
+          <br><br>
+            <div class="card-body">
+              <h5 class="card-title">Créer un évènement </h5>
+              <label for=""> Nom d'événement</label>
+              <div> 
+                <input type="text" formControlName="name" class="form-control">
+                        <span *ngIf="!myForm.get('name')?.valid && myForm.get('name')?.touched"
+                    class="help-block red">Veuillez saisir le Nom d'événement </span>
+              </div>
+              <label for=""> Lieu</label>
+              <div> 
+                <input type="text" formControlName="lieu" class="form-control">
+                        <span *ngIf="!myForm.get('lieu')?.valid && myForm.get('lieu')?.touched"
+                    class="help-block red">Veuillez saisir le lieu </span>
+              </div>
+              <label for="">Parrainer </label>
+            <div>
+               <input type="text" formControlName="parrainer" class="form-control">
+              <span *ngIf="!myForm.get('parrainer')?.valid && myForm.get('parrainer')?.touched"
+              class="help-block red">Veuillez saisir le parrainer </span>
+            </div> 
+              <label for="">Date de début </label>
+              
+              <div>
+                <input type="date" formControlName="datedebut" class="form-control"> 
+                <span *ngIf="!myForm.get('datedebut')?.valid && myForm.get('datedebut')?.touched"
+                    class="help-block red">Veuillez saisir une date de début   </span>
+              </div>  
+              <label for=""> Date de fin</label>
+              <div>
+              <input type="date" formControlName="datefin" class="form-control">
+              <span *ngIf="!myForm.get('datefin')?.valid && myForm.get('datefin')?.touched"
+                    class="help-block red">Veuillez saisir une date de fin</span>
+            </div>
+            <div>
+              <label for="">Photo de l'événement</label>
+
+              <input type="file"  class="form-control" >
+            </div>
+            <input type="hidden" formControlName="userId">
+
+              <br>
+              <button type="submit" class="btn btn-success">Valider</button>
+            </div>
+          </div>
+        
+        </div>
+    </form>

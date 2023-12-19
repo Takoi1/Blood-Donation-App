@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<script src="../../lib/chart/chart.min.js"></script>
+
+<form [formGroup]="myForm" (ngSubmit)="onsubmit()">
+    
+    <div style="height: 100%; height: 100%; display: flex;justify-content: center;padding-top: 2%;padding-bottom: 5%;">
+        
+        <div class="card" style="width: 60%;">
+        
+            <div class="card-body">
+              <h5 class="card-title">Profile </h5>
+              <label for="">Prénom</label>
+              <div>
+              <input type="text" formControlName="nom" class="form-control">
+              <span *ngIf="!myForm.get('nom')?.valid && myForm.get('firstname')?.touched"
+                class="help-block red">Veuillez entrer un prénom valide</span>
+              </div>
+              <label for="">Nom</label>
+              <div>
+              <input type="text" formControlName="prenom" class="form-control"> 
+              <span *ngIf="!myForm.get('prenom')?.valid && myForm.get('prenom')?.touched"
+              class="help-block red">Veuillez entrer un nom valide</span>
+            </div>
+              <label for="">Email</label>
+              <div>
+              <input type="email" formControlName="email" class="form-control">
+              <span *ngIf="!myForm.get('email')?.valid && myForm.get('email')?.touched"
+              class="help-block red">Veuillez entrer une adresse e-mail valide</span></div>
+              <label for="">Mot de passe</label>
+              <div>
+              <input type="password" formControlName="password" class="form-control">
+              <span *ngIf="!myForm.get('password')?.valid && myForm.get('password')?.touched"
+              class="help-block red">Veuillez entrer une Mot de passe valide </span>
+            </div>
+               <br>
+              <button type="submit" class="btn btn-success">Valider</button>
+            </div>
+          </div>
+        
+        </div>
+    </form>
